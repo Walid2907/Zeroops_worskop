@@ -1,0 +1,13 @@
+name: Multi-job Pipeline
+on : push
+jobs: 
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - run: echo "Testing backend"
+    job2:
+      runs-on: ubuntu-latest
+      steps:
+          - uses: actions/checkout@v4
+          - run: echo "Testing frontend"
