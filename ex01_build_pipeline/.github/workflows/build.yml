@@ -1,0 +1,10 @@
+name: Pipeline build
+on : push
+jobs: 
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: python3 --version
+            - run: pwd
+            - run: ls
