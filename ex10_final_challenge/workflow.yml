@@ -1,0 +1,20 @@
+name: end-to-end Production CI Pipeline
+on:
+  pull_request:
+  push:
+    branches: [main]
+env:
+  PROJECT_NAME: "ZeroOps Production"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: echo "$PROJECT_NAME"
+      - run: pip install pytest
+      - run: python -m pytest
+      - run: echo "all Done Succces"
