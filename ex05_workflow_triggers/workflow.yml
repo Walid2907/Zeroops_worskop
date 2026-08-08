@@ -1,8 +1,8 @@
 name: Workflow Triggers
 on : 
   push:
-    braches: [main]
-  pullrequest:
+    branches: [main]
+  pull_request:
 jobs: 
     hello:
         runs-on: ubuntu-latest
