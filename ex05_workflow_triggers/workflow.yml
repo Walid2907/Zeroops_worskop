@@ -1,4 +1,4 @@
-name: Hello ZeroOps
+name: Workflow Triggers
 on : 
   push:
     braches: [main]
